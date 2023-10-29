@@ -1,6 +1,7 @@
-# Чтение чисел из файла
+# Чтение чисел из файла и разделение строки по пробелу
 with open('input.txt', 'r') as file:
-    numbers = [int(line) for line in file.readlines()]
+    line = file.read()
+numbers = [int(num) for num in line.split()]
 
 # Сортировка чисел по возрастанию
 numbers.sort()
